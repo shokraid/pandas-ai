@@ -32,5 +32,4 @@ export default async function DatasetDetailsPage({ params }: PageProps) {
     </>
   );
 }
-export const dynamic='force-dynamic';
 
