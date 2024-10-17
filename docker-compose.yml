@@ -1,5 +1,3 @@
-
- 
 services:
   postgresql:
     image: postgres:14.2-alpine
@@ -10,10 +8,10 @@ services:
     ports:
       - "5430:5432"
     volumes:
-      - pandas-ai-postgres:/var/lib/postgresql/data
+      - ./pgdata:/var/lib/postgresql/data
     networks:
       - pandabi-network
- 
+
   server:
     container_name: pandabi-backend
     build:
@@ -29,7 +27,7 @@ services:
     networks:
       - pandabi-network
     command: "/bin/bash startup.sh"
- 
+
   client:
     container_name: pandabi-frontend
     build:
@@ -45,10 +43,7 @@ services:
     command: npm run start
     networks:
       - pandabi-network
- 
-volumes:
-  pandas-ai-postgres:
- 
+
 networks:
   pandabi-network:
     driver: bridge
