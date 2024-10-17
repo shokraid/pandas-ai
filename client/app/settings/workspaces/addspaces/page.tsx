@@ -31,3 +31,5 @@ export default async function AddSpaces() {
     </div>
   );
 }
+export const dynamic='force-dynamic';
+

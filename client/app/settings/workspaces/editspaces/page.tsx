@@ -27,3 +27,5 @@ export default async function EditWorkSpaces({ searchParams }) {
     </div>
   );
 }
+export const dynamic='force-dynamic';
+

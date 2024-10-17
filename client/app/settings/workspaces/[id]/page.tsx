@@ -79,3 +79,5 @@ export default async function WorkSpacesDetails({ params }: PageProps) {
     </div>
   );
 }
+export const dynamic='force-dynamic';
+
