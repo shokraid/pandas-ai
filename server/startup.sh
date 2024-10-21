@@ -1,12 +1,11 @@
 #!/bin/bash
-
-
+set -e 
 # Load environment variables from .env file if it exists
 if [ -f .env ]; then
-    log "Loading environment variables from .env file"
+    echo "Loading environment variables from .env file"
     export $(cat .env | sed 's/#.*//g' | xargs)
 else
-    log ".env file not found, skipping"
+    echo ".env file not found, skipping"
 fi
 
 source $(poetry env info --path)/bin/activate

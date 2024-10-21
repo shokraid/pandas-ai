@@ -50,5 +50,3 @@ export default async function WorkSpaces() {
     </div>
   );
 }
-
-
